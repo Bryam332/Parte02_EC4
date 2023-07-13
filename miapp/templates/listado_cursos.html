@@ -1,0 +1,12 @@
+<br>
+<hr>
+<br>
+<p> <strong> Cursos de la carrera de ingenieria de sistemas 6to ciclo:
+</strong> </p>
+<ul>
+    {% for curso in cursos %}
+    <li>{{forloop.counter}}. {{curso}}</li>
+{% empty %}
+    <p> No hay Cursos </p>
+{% endfor %}
+</ul>

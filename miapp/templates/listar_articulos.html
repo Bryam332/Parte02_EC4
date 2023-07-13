@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{titulo}}
+{% endblock %}
+
+{% block content %}
+    <h1 class="title">{{titulo}} </h1>
+    <ul>
+        {% for articulo in articulos %}
+            <li>
+                <h4>{{articulo.id}} - {{articulo.titulo}}</h4>
+                <span>Creado: {{articulo.creado}}</span>
+                {% if articulo.publicado %}
+                    <strong> Registrado </strong>
+                {% else %}
+                    <strong> No Registrado </strong>
+                {% endif %}
+
+                <p>{{articulo.contenido}}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
